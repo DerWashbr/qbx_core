@@ -4,29 +4,29 @@
         "wrong_format": "Falsches Format",
         "missing_args": "Nicht alle Argumente wurden ausgefüllt (x, y, z)",
         "missing_args2": "Alle Argumente müssen ausgefüllt sein!",
-        "no_access": "Kein Zugriff auf diesen Befehl",
-        "company_too_poor": "Dein Arbeitgeber hat kein Geld mehr",
+        "no_access": "Du hast keinen Zugriff auf diesen Befehl",
+        "company_too_poor": "Dein Arbeitgeber hat kein Geld mehr!",
         "item_not_exist": "Das Item existiert nicht",
         "too_heavy": "Inventar zu voll",
         "location_not_exist": "Der Ort existiert nicht",
         "duplicate_license": "Doppelte Rockstar-Lizenz gefunden",
         "no_valid_license":  "Keine verifizierte Rockstar-Lizenz gefunden",
         "not_whitelisted": "Du bist nicht gewhitelisted",
-        "server_already_open": "Der Server ist schon geöffnet",
-        "server_already_closed": "Der Server ist schon geschlossen",
+        "server_already_open": "Der Server ist bereits geöffnet",
+        "server_already_closed": "Der Server ist bereits geschlossen",
         "no_permission": "Du hast keine Rechte dafür..",
         "no_waypoint": "Kein Wegpunkt gesetzt.",
         "tp_error": "Fehler beim Teleportieren.",
         "connecting_database_timeout": "Die Verbindung zur Datenbank nicht möglich. (Ist der SQL-Server eingeschaltet?)",
         "connecting_error": "Beim Herstellen der Verbindung zum Server ist ein Fehler aufgetreten. (Überprüfe die Serverkonsole)",
         "no_match_character_registration": "In den Eingabefeldern sind nur Buchstaben zulässig. Leerzeichen am Ende sind nicht zulässig und Wörter müssen mit einem Großbuchstaben beginnen. Du kannst jedoch Wörter mit Leerzeichen dazwischen hinzufügen.",
-        "already_in_queue": "You are already in queue.",
-        "no_subqueue": "You were not let in any sub-queue."
+        "already_in_queue": "Du bist bereits in der Warteschlange.",
+        "no_subqueue": "Du wurdest in keiner Unterwarteschlange zugelassen."
     },
     "success": {
         "server_opened": "Der Server wurde geöffnet",
         "server_closed": "Der Server wurde geschlossen",
-        "teleported_waypoint": "Zum Wegpunkt teleportiert.",
+        "teleported_waypoint": "Du wurdest zum Wegpunkt teleportiert.",
         "character_deleted": "Charakter gelöscht!",
         "character_deleted_citizenid": "Du hast den Charakter mit der Spieler-ID %s erfolgreich gelöscht."
     },
@@ -40,7 +40,7 @@
         "join_server": "Willkommen %s bei %s.",
         "checking_whitelisted": "Hallo %s. Wir prüfen deine Erlaubnis.",
         "exploit_banned": "Du wurdest fürs Cheaten gebannt. Meld dich auf dem Discord: %s",
-        "exploit_dropped": "Du wurdest gekickt, für das Ausnutzen von Exploits",
+        "exploit_dropped": "Du wurdest für das Ausnutzen von Exploits vom Server gekickt.",
         "multichar_title": "Qbox Multichar",
         "multichar_new_character": "Neuen Charakter #%s",
         "char_male": "Männlich",
@@ -59,16 +59,16 @@
         "gender": "Geschlecht",
         "birth_date": "Geburtsdatum",
         "select_gender": "Wähle dein Geschlecht",
-        "confirm_delete": "Are you sure you wish to delete this character?",
-        "in_queue": "🐌 You are %s/%s in queue. (%s) %s"
+        "confirm_delete": "Bist du sicher, dass du dieses Charakter löschen möchtest?",
+        "in_queue": "🐌 Du bist %s/%s in der Warteschlange. (%s) %s"
     },
     "command": {
         "tp": {
             "help": "TP zu Spieler oder Coords (Nur Admins)",
             "params": {
-                "x": { "name": "id/x", "help": "ID vom Spieler oder X position"},
-                "y": { "name": "y", "help": "Y position"},
-                "z": { "name": "z", "help": "Z position"}
+                "x": { "name": "id/x", "help": "Spieler-ID oder X-Position"},
+                "y": { "name": "y", "help": "Y-Position"},
+                "z": { "name": "z", "help": "Z-Position"}
             }
         },
         "tpm": { "help": "TP zum Marker (Nur Admins)" },
@@ -76,22 +76,22 @@
         "addpermission": {
             "help": "Gebe einem Spieler Rechte (Nur God)",
             "params": {
-                "id": { "name": "id", "help": "ID des Spielers" },
+                "id": { "name": "id", "help": "Spieler-ID" },
                 "permission": { "name": "permission", "help": "Zugriffsrechte" }
             }
         },
         "removepermission": {
             "help": "Nimm jemand die Rechte (Nur God)",
             "params": {
-                "id": { "name": "id", "help": "ID des Spielers" },
+                "id": { "name": "id", "help": "Spieler-ID" },
                 "permission": { "name": "permission", "help": "Zugriffsrechte" }
             }
         },
-        "openserver": { "help": "Öffne den Server für jeden (Nur Admins)" },
+        "openserver": { "help": "Öffne den Server für Jeden (Nur Admins)" },
         "closeserver": {
             "help": "Schließe den Server für Leute ohne Rechte (Nur Admins)",
             "params": {
-                "reason": { "name": "reason", "help": "Grund fürs schließen (optional)" }
+                "reason": { "name": "reason", "help": "Grund fürs Schließen (optional)" }
             }
         },
         "car": {
@@ -100,20 +100,25 @@
                 "model": { "name": "model", "help": "Modell Name" }
             }
         },
-        "dv": { "help": "Fahrzeug entfernen (Nur Admins)" },
+        "dv": {
+            "help": "Fahrzeug löschen (Nur Admins)",
+            "params": {
+                "radius": { "name": "radius", "help": "Radius zum Löschen von Fahrzeugen (in Metern)" }
+            }
+        },
         "givemoney": {
             "help": "Gib jemandem Geld (Nur Admins)",
             "params": {
-                "id": { "name": "id", "help": "Spieler ID" },
-                "moneytype": { "name": "moneytype", "help": "Geldtyp (Bargeld, Bank, Crypto)" },
+                "id": { "name": "id", "help": "Spieler-ID" },
+                "moneytype": { "name": "moneytype", "help": "Geldtyp (Money, Bank, Crypto)" },
                 "amount": { "name": "amount", "help": "Geldmenge" }
             }
         },
         "setmoney": {
             "help": "Setze die Geldmenge für einen Spieler (Nur Admins)",
             "params": {
-                "id": { "name": "id", "help": "Spieler ID" },
-                "moneytype": { "name": "moneytype", "help": "Geldtyp (Bargeld, Bank, Crypto)" },
+                "id": { "name": "id", "help": "Spieler-ID" },
+                "moneytype": { "name": "moneytype", "help": "Geldtyp (Money, Bank, Crypto)" },
                 "amount": { "name": "amount", "help": "Geldmenge" }
             }
         },
@@ -121,47 +126,47 @@
         "setjob": {
             "help": "Setze den Job eines Spielers (Nur Admins)",
             "params": {
-                "id": { "name": "id", "help": "Spieler ID" },
-                "job": { "name": "job", "help": "Job Name" },
+                "id": { "name": "id", "help": "Spieler-ID" },
+                "job": { "name": "job", "help": "Beruf" },
                 "grade": { "name": "grade", "help": "Dienstgrad" }
             }
         },
         "changejob": {
-            "help": "Change Active Job of Player (Admin Only)",
+            "help": "Ändere den aktiven Job des Spielers (Nur Admins)",
             "params": {
-                "id": { "name": "id", "help": "Player ID" },
-                "job": { "name": "job", "help": "Job name" }
+                "id": { "name": "id", "help": "Spieler-ID" },
+                "job": { "name": "job", "help": "Dienstgrad" }
             }
         },
         "addjob": {
-            "help": "Add Job to Player (Admin Only)",
+            "help": "Hinzufügen eines Jobs für einen Spieler (Nur Admins)",
             "params": {
-                "id": { "name": "id", "help": "Player ID" },
-                "job": { "name": "job", "help": "Job name" },
-                "grade": { "name": "grade", "help": "Job grade" }
+                "id": { "name": "id", "help": "Spieler-ID" },
+                "job": { "name": "job", "help": "Beruf" },
+                "grade": { "name": "grade", "help": "Dienstgrad" }
             }
         },
         "removejob": {
-            "help": "Remove Job from Player (Admin Only)",
+            "help": "Löschen eines Jobs für einen Spieler (Nur Admins)",
             "params": {
-                "id": { "name": "id", "help": "Player ID" },
-                "job": { "name": "job", "help": "Job name" }
+                "id": { "name": "id", "help": "Spieler-ID" },
+                "job": { "name": "job", "help": "Beruf" }
             }
         },
         "gang": { "help": "Check deine Gang" },
         "setgang": {
             "help": "Setze die Gang eines Spielers (Nur Admins)",
             "params": {
-                "id": { "name": "id", "help": "Spieler ID" },
+                "id": { "name": "id", "help": "Spieler-ID" },
                 "gang": { "name": "gang", "help": "Gang Name" },
                 "grade": { "name": "grade", "help": "Gang Rang" }
             }
         },
         "ooc": { "help": "OOC Chat Nachricht" },
         "me": {
-            "help": "Locale Chat Nachricht",
+            "help": "Lokale Chat Nachricht",
             "params": {
-                "message": { "name": "message", "help": "Nachricht zu senden" }
+                "message": { "name": "message", "help": "Deine Nachricht" }
             }
         }
     }
