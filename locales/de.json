@@ -135,7 +135,7 @@
             "help": "Ändere den aktiven Job des Spielers (Nur Admins)",
             "params": {
                 "id": { "name": "id", "help": "Spieler-ID" },
-                "job": { "name": "job", "help": "Dienstgrad" }
+                "job": { "name": "job", "help": "Beruf" }
             }
         },
         "addjob": {
